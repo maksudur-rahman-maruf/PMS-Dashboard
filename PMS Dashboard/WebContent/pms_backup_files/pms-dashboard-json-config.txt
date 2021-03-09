@@ -1,0 +1,122 @@
+{
+    "type": "XYChart",
+    "data": [{
+        "category": "January",
+        "achievement": 27.77
+    }, {
+        "category": "February",
+        "achievement": 12.76
+    }, {
+        "category": "March",
+        "achievement": 44
+    }, {
+        "category": "April",
+        "achievement": 56.56
+    }, {
+        "category": "May",
+        "achievement": 29.9
+    }, {
+        "category": "June",
+        "achievement": 31.1
+    }, {
+        "category": "July",
+        "achievement": 45.55
+    }, {
+        "category": "August",
+        "achievement": 79.89
+    }, {
+        "category": "September",
+        "achievement": 98.89
+    }, {
+        "category": "October",
+        "achievement": 56.56
+    }, {
+        "category": "November",
+        "achievement": 73.32
+    }, {
+        "category": "December",
+        "achievement": 99
+    }],
+    "xAxes": [{
+        "type": "CategoryAxis",
+        "dataFields": {
+            "category": "category"
+        },
+        "renderer": {
+            "grid": {
+                "template": {
+                    "type": "Grid",
+                    "visible": false,
+                    "location": 0
+                }
+            },
+            "minGridDistance": 20
+        }
+    }],
+    "yAxes": [{
+        "type": "ValueAxis",
+        "title": {
+            "type": "Label",
+            "text": "Achievement"
+        },
+        "min": 0,
+        "max": 110,
+        "renderer": {
+            "grid": {
+                "template": {
+                    "type": "Grid"
+                }
+            },
+            "line": {
+                "type": "AxisLine",
+                "stroke": "#cfcfd6",
+                "strokeWidth": 1,
+                "strokeOpacity": 1
+            },
+            "maxLabelPosition": 0.98
+        }
+    }],
+    "series": [{
+        "type": "ColumnSeries",
+        "name": "Achievement",
+        "columns": {
+            "template": {
+                "type": "Column",
+                "strokeOpacity": 0,
+                "tooltipText": "{categoryX}\n{valueY}",
+                "tooltipPosition": "pointer"
+            }
+        },
+        "bullets": {
+            "values": [{
+                "type": "LabelBullet",
+                "visible": true,
+                "label": {
+                    "type": "Label",
+                    "text": "{valueY}%",
+                    "paddingTop": -20
+                },
+                "locationY": 0,
+                "locationX": 0.5
+            }],
+            "template": {
+                "type": "Bullet"
+            }
+        },
+        "dataFields": {
+            "valueY": "achievement",
+            "categoryX": "category"
+        },
+        "fill": "#67b7dc",
+        "stroke": "#67b7dc",
+        "sequencedInterpolation": true,
+        "sequencedInterpolationDelay": 100
+    }],
+    "legend": {
+        "type": "Legend"
+    },
+    "scrollbarX": {
+        "type": "Scrollbar"
+    },
+    "maskBullets": false
+}

@@ -1,0 +1,74 @@
+<div class="container" style="border: 1px ridge #b0b2ba;">
+    <form>
+        <div class="row mb-2 mt-2">
+
+            <th:block
+                    th:include="html-components/form/required-fiscal-year-in-row-select2-select">
+            </th:block>
+
+
+            <th:block
+                    th:include="html-components/form/required-month-in-row-select2-select">
+            </th:block>
+
+        </div>
+
+    </form>
+
+</div>
+
+
+<div class="container" style="border: 1px ridge #b0b2ba; margin-top: 20px">
+    <div class="card card-custom gutter-b">
+        <!--<div class="card-header">
+            <div class="card-title">
+                <h3 class="card-label">
+                    Basic Card
+                    <small>sub title</small>
+                </h3>
+            </div>
+        </div>-->
+        <div class="card-body">
+
+            <!--<div id="chartdiv" style="width: 100%; height: 400px; background-color: #FFFFFF;" ></div>-->
+            <div id="chartdiv" style="width:100%; height:500px;"></div>
+
+        </div>
+    </div>
+
+</div>
+
+
+<div class="container" style="border: 1px ridge #b0b2ba; margin-top: 20px; padding-top: 10px">
+    <div class="row mb-2">
+
+        <div class="col-lg-6 mb-lg-0 mb-6">
+            <label class="in-row-label-text-amchart-report">FY :</label>
+            <span class="in-row-label-text-amchart-report">
+<div id="table-fiscal-year-label">2019-2020</div>
+</span>
+        </div>
+
+        <div class="col-lg-6 mb-lg-0 mb-6">
+            <label class="in-row-label-text-amchart-report">Month :</label>
+            <span class="in-row-label-text-amchart-report">
+<div id="table-month-label">July</div>
+</span>
+
+        </div>
+    </div>
+
+    <table class="table amchart-report table-hover" id="bill-collection-office-wise-table">
+        <thead class="amchart-report">
+        <tr class="active">
+            <th>Division/Zone</th>
+            <th>Target</th>
+            <th>Achievement</th>
+            <th>Achievement Upto</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</div>
